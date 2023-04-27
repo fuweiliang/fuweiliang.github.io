@@ -13,6 +13,12 @@
 ]]></content>
   </entry>
   <entry>
+    <title>旅行记</title>
+    <url>/2023/04/10/Myself/</url>
+    <content><![CDATA[<p><a href="https://imgse.com/i/ppqcESH"><img src="https://s1.ax1x.com/2023/04/10/ppqcESH.jpg" alt="ppqcESH.jpg"></a><br><a href="https://imgse.com/i/ppqckfe"><img src="https://s1.ax1x.com/2023/04/10/ppqckfe.jpg" alt="ppqckfe.jpg"></a><br><a href="https://imgse.com/i/ppqcFYD"><img src="https://s1.ax1x.com/2023/04/10/ppqcFYD.jpg" alt="ppqcFYD.jpg"></a><br><a href="https://imgse.com/i/ppq6xyR"><img src="https://s1.ax1x.com/2023/04/10/ppq6xyR.jpg" alt="ppq6xyR.jpg"></a><br><a href="https://imgse.com/i/ppq6jSJ"><img src="https://s1.ax1x.com/2023/04/10/ppq6jSJ.jpg" alt="ppq6jSJ.jpg"></a><br><a href="https://imgse.com/i/ppq6qFU"><img src="https://s1.ax1x.com/2023/04/10/ppq6qFU.jpg" alt="ppq6qFU.jpg"></a><br><a href="https://imgse.com/i/ppq67wV"><img src="https://s1.ax1x.com/2023/04/10/ppq67wV.jpg" alt="ppq67wV.jpg"></a><br><a href="https://imgse.com/i/ppq4EU1"><img src="https://s1.ax1x.com/2023/04/10/ppq4EU1.jpg" alt="ppq4EU1.jpg"></a><br><a href="https://imgse.com/i/ppq4AER"><img src="https://s1.ax1x.com/2023/04/10/ppq4AER.jpg" alt="ppq4AER.jpg"></a><br><a href="https://imgse.com/i/ppq4V4x"><img src="https://s1.ax1x.com/2023/04/10/ppq4V4x.jpg" alt="ppq4V4x.jpg"></a><br><a href="https://imgse.com/i/ppq4Fb9"><img src="https://s1.ax1x.com/2023/04/10/ppq4Fb9.jpg" alt="ppq4Fb9.jpg"></a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>MySql学习笔记</title>
     <url>/2023/03/23/MySql/</url>
     <content><![CDATA[<p>1.登录<br>2.USE db_name(数据库名称);<br>CREATE TABLE tb_name(<br>定义字段 字段名 数据类型 是否为空 是否主键，<br>字段2，<br>字段3，<br>….<br>);<br>4.查看表的基本结构 ①DESC tb_name;<br>②SHOW COLUMNS FROM tb_name;<br>5.查看创建表的详细结构 SHOW CREATE TABLE tb_name;<br>6.查看数据库中的所有表格 SHOW TABLES;<br>7.查看所有数据库 SHOW DATABASES;<br>8.删除表 DROP TABLE tb_name;<br>9.删除数据库 DROP DATABASES DB_NAME;<br>10.创建数据库 CREATE DATABASES db_anme;<br>11.exit<br>12 修改 ALTER<br>添加列 ALTER TABLE tb_name ADD COLUMN 字段名 数据类型 是否为空 FIRST(位置第一)<br>AFTER 字段名 （位于某字段之后)&#x2F;(加在最后)<br>13.修改列默认值 ALTER TABLE tb_name<br>ALTER col_name(字段)SET DEFAULT 值；设置默认值<br>删除默认值 ALTER TABLE tb_name<br>ALTER COL_NAME DROP DEFAULT;<br>给student表添加3个字段</p>
@@ -66,12 +72,6 @@
 <p>5.3.1连接查询<br>1.交叉查询<br>交叉查询(cross join) 又称笛卡尔积，有第一个表的每一行与第二与第二个表的每一行链接形成的是表，语法格式如下<br>seect*from table cross join table 2; 或 select *from table,table2;<br>2.内连接<br>内连接使用的比较运算符进行标间某些字段值的比较操作，并将于连接条件相匹配的数据行组成新纪录，以消除交叉连接中没有意义的数据航行<br>内连接有两种链接方式：<br>第一种：使用inner join 定义连接条件的显示语法结构<br>语法格式如下select 目标列表达式1目标列表达式2 目标列表达式n；<br>from tbalel [innor] join table2 on 链接条件<br>[where 过滤条件]<br>第二种：使用where字句定义练肌肉条件的隐式语法结构<br>语法结构<br>select 目标表达式1，目标表达式2  …..目标表达式n from table,table2 where 连接条件 [and过滤条件]<br>3.第二种<br>使用where子句定义连接条件的隐式语法结构。<br>语法格式如下<br>select 目标表达式1，目标表达式2  …..目标表达式n from table ,table2  where 链接条件[and过滤条件]<br>4.自然连接<br>nature join 自然连接关键词<br>select * from student NATURAL join speciality;<br>将某个表与自身进行链接，称为子表链接或自身链接，简称自来凝结，使用自链接需要为表多个别名，且对所有查询字段的引用必须使用表别名限定<br>5.外连接在内连接的结果表，只有满足连接条件的行才能作为结果输出。外连接的结果表不但包含满足连接条件的行还包括相应表中的所有行。<br>左外连接：结果表除了包括满足链接条件的行外，还包括坐标的所有行，当坐标有记录而在右表中没有匹配记录，在表对应列被摄值为空值null</p>
 <p>右外连接：遇上相反·<br>普通字查询<br>执行的顺序是只查询的结果，作为附查询的条件<br>只执行一次<br>返回一个值的子查询<br>返回多个字的只查询</p>
 <p>1.创建视图<br>create [or replace] view name as select……from ….where [with check option]限制条件<br>2.查看视图<br>select…..from view_name;<br>3.查看视图结构<br>desc view_name;<br>4.插入数据<br>insert into view_name values();</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>旅行记</title>
-    <url>/2023/04/10/Myself/</url>
-    <content><![CDATA[<p><a href="https://imgse.com/i/ppqcESH"><img src="https://s1.ax1x.com/2023/04/10/ppqcESH.jpg" alt="ppqcESH.jpg"></a><br><a href="https://imgse.com/i/ppqckfe"><img src="https://s1.ax1x.com/2023/04/10/ppqckfe.jpg" alt="ppqckfe.jpg"></a><br><a href="https://imgse.com/i/ppqcFYD"><img src="https://s1.ax1x.com/2023/04/10/ppqcFYD.jpg" alt="ppqcFYD.jpg"></a><br><a href="https://imgse.com/i/ppq6xyR"><img src="https://s1.ax1x.com/2023/04/10/ppq6xyR.jpg" alt="ppq6xyR.jpg"></a><br><a href="https://imgse.com/i/ppq6jSJ"><img src="https://s1.ax1x.com/2023/04/10/ppq6jSJ.jpg" alt="ppq6jSJ.jpg"></a><br><a href="https://imgse.com/i/ppq6qFU"><img src="https://s1.ax1x.com/2023/04/10/ppq6qFU.jpg" alt="ppq6qFU.jpg"></a><br><a href="https://imgse.com/i/ppq67wV"><img src="https://s1.ax1x.com/2023/04/10/ppq67wV.jpg" alt="ppq67wV.jpg"></a><br><a href="https://imgse.com/i/ppq4EU1"><img src="https://s1.ax1x.com/2023/04/10/ppq4EU1.jpg" alt="ppq4EU1.jpg"></a><br><a href="https://imgse.com/i/ppq4AER"><img src="https://s1.ax1x.com/2023/04/10/ppq4AER.jpg" alt="ppq4AER.jpg"></a><br><a href="https://imgse.com/i/ppq4V4x"><img src="https://s1.ax1x.com/2023/04/10/ppq4V4x.jpg" alt="ppq4V4x.jpg"></a><br><a href="https://imgse.com/i/ppq4Fb9"><img src="https://s1.ax1x.com/2023/04/10/ppq4Fb9.jpg" alt="ppq4Fb9.jpg"></a></p>
 ]]></content>
   </entry>
   <entry>
